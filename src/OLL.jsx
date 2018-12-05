@@ -36,11 +36,10 @@ class OLL extends React.Component {
     console.log(found);
     return (
       <div className="container">
-        <h3 className="title is-3">Please pick an OLL below</h3>
-        <p>All Edges Correctly Oriented</p>
-
         {this.state.mainPage && (
           <React.Fragment>
+            <h3 className="title is-3">Please pick an OLL below</h3>
+            <p>All Edges Correctly Oriented</p>
             <div className="columns is-mobile">
               <div className="column ">
                 <figure className="image is-128x128">
@@ -115,7 +114,7 @@ class OLL extends React.Component {
                 </figure>
               </div>
               <div className="column" />
-            </div>{" "}
+            </div>
           </React.Fragment>
         )}
         {this.state.showPage && (
