@@ -14,7 +14,8 @@ class OLL extends React.Component {
     super(props);
     this.state = {
       selection: "OLL21",
-      showPage: false
+      showPage: false,
+      mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -22,12 +23,13 @@ class OLL extends React.Component {
   handleClick(e) {
     this.setState({
       selection: e.target.name,
-      showPage: true
+      showPage: true,
+      mainPage: false
     });
   }
 
   render() {
-    const selection = this.state.selection
+    const selection = this.state.selection;
     var found = data.find(function(element) {
       return element.id === selection;
     });
@@ -37,47 +39,88 @@ class OLL extends React.Component {
         <h3 className="title is-3">Please pick an OLL below</h3>
         <p>All Edges Correctly Oriented</p>
 
-        <div className="columns is-mobile">
-          <div className="column ">
-            <figure className="image is-128x128">
-              <img name={"OLL21"} alt={'OLL Case'}onClick={this.handleClick} src={OLL21} />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image is-128x128">
-              <img name={"OLL22"} alt={'OLL Case'}onClick={this.handleClick} src={OLL22} />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image is-128x128">
-              <img name={"OLL23"} alt={'OLL Case'}onClick={this.handleClick} src={OLL23} />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image is-128x128">
-              <img name={"OLL24"} alt={'OLL Case'}onClick={this.handleClick} src={OLL24} />
-            </figure>
-          </div>
-        </div>
-        <div className="columns">
-          <div className="column">
-            <figure className="image is-128x128">
-              <img name={"OLL25"} alt={'OLL Case'}onClick={this.handleClick} src={OLL25} />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image is-128x128">
-              <img name={"OLL26"} alt={'OLL Case'}onClick={this.handleClick} src={OLL26} />
-            </figure>
-          </div>
-          <div className="column">
-            <figure className="image is-128x128">
-              <img name={"OLL27"} alt={'OLL Case'}onClick={this.handleClick} src={OLL27} />
-            </figure>
-          </div>
-          <div className="column" />
-        </div>
-        <Algorithm data={found} />
+        {this.state.mainPage && (
+          <React.Fragment>
+            <div className="columns is-mobile">
+              <div className="column ">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL21"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL21}
+                  />
+                </figure>
+              </div>
+              <div className="column">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL22"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL22}
+                  />
+                </figure>
+              </div>
+              <div className="column">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL23"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL23}
+                  />
+                </figure>
+              </div>
+              <div className="column">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL24"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL24}
+                  />
+                </figure>
+              </div>
+            </div>
+            <div className="columns">
+              <div className="column">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL25"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL25}
+                  />
+                </figure>
+              </div>
+              <div className="column">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL26"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL26}
+                  />
+                </figure>
+              </div>
+              <div className="column">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL27"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL27}
+                  />
+                </figure>
+              </div>
+              <div className="column" />
+            </div>{" "}
+          </React.Fragment>
+        )}
+        {this.state.showPage && (
+          <Algorithm data={found} image={this.state.selection} />
+        )}
       </div>
     );
   }
