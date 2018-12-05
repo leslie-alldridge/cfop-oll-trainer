@@ -6,6 +6,10 @@ class Algorithm extends Component {
       <div>
         {console.log(this.props)}
         <p>hi</p>
+        {this.props.data.alg.map(item => {
+          return <p>{item}</p>
+          
+        })}
       </div>
     );
   }

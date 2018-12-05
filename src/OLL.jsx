@@ -9,20 +9,11 @@ import OLL26 from "./images/OLL-26.PNG";
 import OLL27 from "./images/OLL-27.PNG";
 import data from "./data";
 
-function findObjectByKey(array, key, value) {
-  for (var i = 0; i < array.length; i++) {
-    if (array[i][key] === value) {
-      return array[i];
-    }
-  }
-  return null;
-}
-
 class OLL extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selection: "",
+      selection: "OLL21",
       showPage: false
     };
     this.handleClick = this.handleClick.bind(this);
@@ -33,19 +24,14 @@ class OLL extends React.Component {
       selection: e.target.name,
       showPage: true
     });
-    console.log(e.target.name);
-    console.log(data);
   }
 
   render() {
-    const alg = findObjectByKey(
-      data,
-      this.state.selection,
-      this.state.selection
-    );
-    console.log(alg);
-    console.log(this.state.selection);
-
+    const selection = this.state.selection
+    var found = data.find(function(element) {
+      return element.id === selection;
+    });
+    console.log(found);
     return (
       <div className="container">
         <h3 className="title is-3">Please pick an OLL below</h3>
@@ -53,45 +39,45 @@ class OLL extends React.Component {
 
         <div className="columns is-mobile">
           <div className="column ">
-            <figure class="image is-128x128">
-              <img name={"OLL21"} onClick={this.handleClick} src={OLL21} />
+            <figure className="image is-128x128">
+              <img name={"OLL21"} alt={'OLL Case'}onClick={this.handleClick} src={OLL21} />
             </figure>
           </div>
           <div className="column">
-            <figure class="image is-128x128">
-              <img src={OLL22} />
+            <figure className="image is-128x128">
+              <img name={"OLL22"} alt={'OLL Case'}onClick={this.handleClick} src={OLL22} />
             </figure>
           </div>
           <div className="column">
-            <figure class="image is-128x128">
-              <img src={OLL23} />
+            <figure className="image is-128x128">
+              <img name={"OLL23"} alt={'OLL Case'}onClick={this.handleClick} src={OLL23} />
             </figure>
           </div>
           <div className="column">
-            <figure class="image is-128x128">
-              <img src={OLL24} />
+            <figure className="image is-128x128">
+              <img name={"OLL24"} alt={'OLL Case'}onClick={this.handleClick} src={OLL24} />
             </figure>
           </div>
         </div>
-        <div class="columns">
-          <div class="column">
-            <figure class="image is-128x128">
-              <img src={OLL25} />
+        <div className="columns">
+          <div className="column">
+            <figure className="image is-128x128">
+              <img name={"OLL25"} alt={'OLL Case'}onClick={this.handleClick} src={OLL25} />
             </figure>
           </div>
-          <div class="column">
-            <figure class="image is-128x128">
-              <img src={OLL26} />
+          <div className="column">
+            <figure className="image is-128x128">
+              <img name={"OLL26"} alt={'OLL Case'}onClick={this.handleClick} src={OLL26} />
             </figure>
           </div>
-          <div class="column">
-            <figure class="image is-128x128">
-              <img src={OLL27} />
+          <div className="column">
+            <figure className="image is-128x128">
+              <img name={"OLL27"} alt={'OLL Case'}onClick={this.handleClick} src={OLL27} />
             </figure>
           </div>
-          <div class="column" />
+          <div className="column" />
         </div>
-        <Algorithm data={data} />
+        <Algorithm data={found} />
       </div>
     );
   }
