@@ -23,11 +23,11 @@ class Algorithm extends Component {
     });
   };
 
-  handleChange = e => {
-    console.log(e.target.name);
+  handleChange = item => {
+    console.log(item.target.innerText);
 
     this.setState({
-      alg: e.target.name
+      alg: item.target.innerText
     });
   };
 
@@ -40,17 +40,19 @@ class Algorithm extends Component {
         </h3>
         <p>Pick your preferred algorithm and a session type</p>
         <p>Algorithms</p>
-
-        <p>You picked {this.state.alg || "No alg selected"}}</p>
-        <select>
+        <p>Please pick an algorithm below</p>
+        {this.state.alg !== "" && <p>You picked {this.state.alg}</p>}
+        <ul>
           {this.props.data.alg.map(item => {
+            console.log(item);
+
             return (
-              <option onClick={this.handleChange} name={item}>
+              <li onClick={item => this.handleChange(item)} name={item}>
                 {item}
-              </option>
+              </li>
             );
           })}
-        </select>
+        </ul>
         <p>Session Type</p>
         <button onClick={this.handleDrills}>Drills</button>
         <button onClick={this.handleTimer}>Time Based</button>
