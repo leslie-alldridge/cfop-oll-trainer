@@ -5,7 +5,8 @@ import Drills from "./Drills";
 class Algorithm extends Component {
   state = {
     drills: false,
-    timer: false
+    timer: false,
+    alg: ""
   };
 
   handleDrills = () => {
@@ -22,6 +23,14 @@ class Algorithm extends Component {
     });
   };
 
+  handleChange = e => {
+    console.log(e.target.name);
+
+    this.setState({
+      alg: e.target.name
+    });
+  };
+
   render() {
     return (
       <div>
@@ -31,9 +40,15 @@ class Algorithm extends Component {
         </h3>
         <p>Pick your preferred algorithm and a session type</p>
         <p>Algorithms</p>
+
+        <p>You picked {this.state.alg || "No alg selected"}}</p>
         <select>
           {this.props.data.alg.map(item => {
-            return <option>{item}</option>;
+            return (
+              <option onClick={this.handleChange} name={item}>
+                {item}
+              </option>
+            );
           })}
         </select>
         <p>Session Type</p>
