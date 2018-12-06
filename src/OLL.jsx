@@ -18,6 +18,7 @@ class OLL extends React.Component {
       mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
 
   handleClick(e) {
@@ -25,6 +26,13 @@ class OLL extends React.Component {
       selection: e.target.name,
       showPage: true,
       mainPage: false
+    });
+  }
+
+  goBack() {
+    this.setState({
+      showPage: false,
+      mainPage: true
     });
   }
 
@@ -118,7 +126,11 @@ class OLL extends React.Component {
           </React.Fragment>
         )}
         {this.state.showPage && (
-          <Algorithm data={found} image={this.state.selection} />
+          <Algorithm
+            goBack={this.goBack}
+            data={found}
+            image={this.state.selection}
+          />
         )}
       </div>
     );

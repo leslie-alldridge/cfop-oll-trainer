@@ -3,6 +3,9 @@ import Timer from "./Timer";
 import Drills from "./Drills";
 
 class Algorithm extends Component {
+  // constructor(props) {
+  //   super(props);
+  // }
   state = {
     drills: false,
     timer: false
@@ -24,6 +27,7 @@ class Algorithm extends Component {
         <button>Time Based</button>
         <Timer />
         <Drills />
+        <button onClick={this.props.goBack}>Back</button>
       </div>
     );
   }
