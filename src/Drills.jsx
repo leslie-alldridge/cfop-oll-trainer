@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Stopwatch from "./Stopwatch";
 
 class Drills extends Component {
   state = {
@@ -34,6 +35,7 @@ class Drills extends Component {
         {this.state.begin && (
           <div>
             <h3>Rounds remaining {this.state.quantity}</h3>
+            <Stopwatch />
           </div>
         )}
       </div>
