@@ -20,6 +20,13 @@ class Drills extends Component {
     });
   };
 
+  handleRound = () => {
+    this.setState({
+      quantity: this.state.quantity - 1
+    });
+    console.log(this.state);
+  };
+
   render() {
     return (
       <div>
@@ -35,7 +42,7 @@ class Drills extends Component {
         {this.state.begin && (
           <div>
             <h3>Rounds remaining {this.state.quantity}</h3>
-            <Stopwatch />
+            <Stopwatch handleRound={this.handleRound} />
           </div>
         )}
       </div>

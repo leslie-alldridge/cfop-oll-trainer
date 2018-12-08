@@ -40,6 +40,9 @@ class Stopwatch extends React.Component {
     this.setState({ isRunning: !this.state.isRunning }, () => {
       this.state.isRunning ? this.startTimer() : clearInterval(this.timer);
     });
+    if (!this.state.isRunning) {
+      this.props.handleRound();
+    }
   }
   lap() {
     const { lapTimes, timeElapsed } = this.state;
