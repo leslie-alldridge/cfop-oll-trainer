@@ -12,7 +12,7 @@ class Stopwatch extends React.Component {
   constructor(props) {
     super(props);
 
-    ["lap", "update", "reset", "toggle"].forEach(method => {
+    ["lap", "update", "reset", "toggle", "spacebarListener"].forEach(method => {
       this[method] = this[method].bind(this);
     });
 
@@ -22,6 +22,20 @@ class Stopwatch extends React.Component {
       timeElapsed: 0
     };
   }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.spacebarListener, false);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.spacebarListener, false);
+  }
+
+  spacebarListener(e) {
+    if (e.keyCode === 32) {
+      this.toggle();
+    }
+  }
+
   toggle() {
     this.setState({ isRunning: !this.state.isRunning }, () => {
       this.state.isRunning ? this.startTimer() : clearInterval(this.timer);
