@@ -6,7 +6,8 @@ class Algorithm extends Component {
   state = {
     drills: false,
     timer: false,
-    alg: ""
+    alg: "",
+    selected: false
   };
 
   handleDrills = () => {
@@ -25,8 +26,8 @@ class Algorithm extends Component {
 
   handleChange = item => {
     console.log(item.target.innerText);
-
     this.setState({
+      selected: true,
       alg: item.target.innerText
     });
   };
@@ -53,9 +54,17 @@ class Algorithm extends Component {
             );
           })}
         </ul>
-        <p>Session Type</p>
-        <button onClick={this.handleDrills}>Drills</button>
-        <button onClick={this.handleTimer}>Time Based</button>
+        {this.state.selected === true ? (
+          <p>Session Type</p>
+        ) : (
+          <p>Please pick an algorithm to practice</p>
+        )}
+        {this.state.selected !== false && (
+          <button onClick={this.handleDrills}>Drills</button>
+        )}
+        {this.state.selected !== false && (
+          <button onClick={this.handleTimer}>Time Based</button>
+        )}
         {this.state.timer && <Timer />}
         {this.state.drills && <Drills />}
         <button onClick={this.props.goBack}>Back</button>
