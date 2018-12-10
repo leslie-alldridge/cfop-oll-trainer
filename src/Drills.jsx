@@ -21,9 +21,11 @@ class Drills extends Component {
   };
 
   handleRound = () => {
-    this.setState({
-      quantity: this.state.quantity - 1
-    });
+    if (this.state.quantity > 0) {
+      this.setState({
+        quantity: this.state.quantity - 1
+      });
+    }
     console.log(this.state);
   };
 
