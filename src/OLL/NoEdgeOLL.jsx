@@ -8,7 +8,7 @@ import OLL04 from "../images/OLL-4.png";
 import OLL03 from "../images/OLL-3.png";
 import OLL02 from "../images/OLL-2.png";
 import OLL01 from "../images/OLL-1.png";
-import data from "../allEdgesData";
+import data from "../noEdgesData";
 
 class NoEdgeOLL extends React.Component {
   constructor(props) {
