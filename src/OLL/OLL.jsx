@@ -1,13 +1,13 @@
 import React from "react";
-import Algorithm from "./Algorithm";
-import OLL21 from "./images/OLL-21.PNG";
-import OLL22 from "./images/OLL-22.PNG";
-import OLL23 from "./images/OLL-23.PNG";
-import OLL24 from "./images/OLL-24.PNG";
-import OLL25 from "./images/OLL-25.PNG";
-import OLL26 from "./images/OLL-26.PNG";
-import OLL27 from "./images/OLL-27.PNG";
-import data from "./data";
+import Algorithm from "../Algorithm";
+import OLL21 from "../images/OLL-21.PNG";
+import OLL22 from "../images/OLL-22.PNG";
+import OLL23 from "../images/OLL-23.PNG";
+import OLL24 from "../images/OLL-24.PNG";
+import OLL25 from "../images/OLL-25.PNG";
+import OLL26 from "../images/OLL-26.PNG";
+import OLL27 from "../images/OLL-27.PNG";
+import data from "../data";
 
 class OLL extends React.Component {
   constructor(props) {
@@ -121,6 +121,7 @@ class OLL extends React.Component {
                   />
                 </figure>
               </div>
+
               <div className="column" />
             </div>
           </React.Fragment>

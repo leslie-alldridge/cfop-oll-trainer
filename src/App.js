@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import OLL from "./OLL";
+import OLL from "./OLL/OLL";
+import NoEdgeOLL from "./OLL/NoEdgeOLL";
 class App extends Component {
   render() {
     return (
@@ -13,6 +14,7 @@ class App extends Component {
           </div>
         </section>
         <OLL />
+        <NoEdgeOLL />
       </div>
     );
   }

@@ -9,9 +9,11 @@ Users should be able to practice and time their execution
 
 Modes for 'Random' OLL's
 
-
-### Todos 
+### Todos
 
 Add styling for components and toggle render
 Make the timer page full screen and really user friendly
-Have the algs easy to see on screen so the user can sit back and still see it. 
+Have the algs easy to see on screen so the user can sit back and still see it.
+
+Images link
+http://www.rubiksplace.com/speedcubing/OLL-algorithms/
