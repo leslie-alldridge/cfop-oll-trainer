@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import OLL from "./OLL/OLL";
 import NoEdgeOLL from "./OLL/NoEdgeOLL";
+import CShapes from "./OLL/CShapes";
 class App extends Component {
   render() {
     return (
@@ -15,6 +16,7 @@ class App extends Component {
         </section>
         <OLL />
         <NoEdgeOLL />
+        <CShapes />
       </div>
     );
   }

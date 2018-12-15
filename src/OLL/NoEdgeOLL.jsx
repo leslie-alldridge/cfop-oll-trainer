@@ -10,7 +10,7 @@ import OLL02 from "../images/OLL-2.png";
 import OLL01 from "../images/OLL-1.png";
 import data from "../data";
 
-class OLL extends React.Component {
+class NoEdgeOLL extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -146,4 +146,4 @@ class OLL extends React.Component {
   }
 }
 
-export default OLL;
+export default NoEdgeOLL;
