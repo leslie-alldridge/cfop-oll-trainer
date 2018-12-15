@@ -47,8 +47,8 @@ class NoEdgeOLL extends React.Component {
       <div className="container">
         {this.state.mainPage && (
           <React.Fragment>
-            <p>No Edges Correctly Oriented </p>
-            <div className="columns is-mobile">
+            <p className="title is-3">No Edges Correctly Oriented </p>
+            <div className="columns is-mobile algContainer">
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
