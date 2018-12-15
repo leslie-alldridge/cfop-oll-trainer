@@ -7,7 +7,7 @@ import OLL24 from "../images/OLL-24.PNG";
 import OLL25 from "../images/OLL-25.PNG";
 import OLL26 from "../images/OLL-26.PNG";
 import OLL27 from "../images/OLL-27.PNG";
-import data from "../data";
+import data from "../allEdgesData";
 
 class OLL extends React.Component {
   constructor(props) {

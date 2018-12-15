@@ -3,7 +3,7 @@ import Algorithm from "../Algorithm";
 import OLL34 from "../images/OLL-34.png";
 import OLL46 from "../images/OLL-46.png";
 
-import data from "../data";
+import data from "../cShapesData";
 
 class CShapes extends React.Component {
   constructor(props) {
