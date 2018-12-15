@@ -51,6 +51,7 @@ class OLL extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
+                  className="grow"
                     name={"OLL21"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -60,7 +61,8 @@ class OLL extends React.Component {
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                <img
+                  className="grow"
                     name={"OLL22"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -71,6 +73,7 @@ class OLL extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
+                  className="grow"
                     name={"OLL23"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -81,6 +84,7 @@ class OLL extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
+                  className="grow"
                     name={"OLL24"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -93,6 +97,7 @@ class OLL extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
+                  className="grow"
                     name={"OLL25"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -103,6 +108,7 @@ class OLL extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
+                  className="grow"
                     name={"OLL26"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -113,6 +119,7 @@ class OLL extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
+                  className="grow"
                     name={"OLL27"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}

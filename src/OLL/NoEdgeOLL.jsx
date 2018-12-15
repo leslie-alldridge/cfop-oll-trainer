@@ -51,7 +51,8 @@ class NoEdgeOLL extends React.Component {
             <div className="columns is-mobile algContainer">
               <div className="column ">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL01"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -61,7 +62,8 @@ class NoEdgeOLL extends React.Component {
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL02"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -71,7 +73,8 @@ class NoEdgeOLL extends React.Component {
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL03"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -81,7 +84,8 @@ class NoEdgeOLL extends React.Component {
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL04"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -93,7 +97,8 @@ class NoEdgeOLL extends React.Component {
             <div className="columns">
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL17"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -103,7 +108,8 @@ class NoEdgeOLL extends React.Component {
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL20"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -113,7 +119,8 @@ class NoEdgeOLL extends React.Component {
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL18"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -123,7 +130,8 @@ class NoEdgeOLL extends React.Component {
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                  <img
+                 <img
+                  className="grow"
                     name={"OLL19"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}

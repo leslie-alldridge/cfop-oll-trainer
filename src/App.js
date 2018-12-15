@@ -3,6 +3,24 @@ import OLL from "./OLL/OLL";
 import NoEdgeOLL from "./OLL/NoEdgeOLL";
 import CShapes from "./OLL/CShapes";
 class App extends Component {
+  state ={
+    OLL: true,
+    NoEdgeOLL: true,
+    CShapes: true
+  }
+
+  handlePageChange = (name) => {
+    console.log(name);
+    if (name === 'CShapes'){
+      this.setState({
+        CShapes: true,
+        NoEdgeOLL: false,
+        OLL: false
+      })
+    }
+    
+  }
+
   render() {
     return (
       <div className="App">
@@ -14,9 +32,9 @@ class App extends Component {
             </div>
           </div>
         </section>
-        <OLL />
-        <NoEdgeOLL />
-        <CShapes />
+       {this.state.OLL && <OLL handlePageChange={this.handlePageChange}/>}
+       {this.state.NoEdgeOLL && <NoEdgeOLL handlePageChange={this.handlePageChange}/>}
+        {this.state.CShapes && <CShapes handlePageChange={this.handlePageChange}/>}
       </div>
     );
   }

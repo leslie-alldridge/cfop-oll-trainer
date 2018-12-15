@@ -21,8 +21,9 @@ class CShapes extends React.Component {
     this.setState({
       selection: e.target.name,
       showPage: true,
-      mainPage: false
+      mainPage: true
     });
+    this.props.handlePageChange('CShapes')
   }
 
   goBack() {
@@ -37,7 +38,6 @@ class CShapes extends React.Component {
     var found = data.find(function(element) {
       return element.id === selection;
     });
-    console.log(found);
     return (
       <div className="container">
         {this.state.mainPage && (
@@ -47,6 +47,8 @@ class CShapes extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
+                 
+                  className="grow"
                     name={"OLL34"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
@@ -57,6 +59,8 @@ class CShapes extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
+                
+                  className="grow"
                     name={"OLL46"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
