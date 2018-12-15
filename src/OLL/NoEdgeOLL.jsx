@@ -1,12 +1,13 @@
 import React from "react";
 import Algorithm from "../Algorithm";
-import OLL21 from "../images/OLL-21.PNG";
-import OLL22 from "../images/OLL-22.PNG";
-import OLL23 from "../images/OLL-23.PNG";
-import OLL24 from "../images/OLL-24.PNG";
-import OLL25 from "../images/OLL-25.PNG";
-import OLL26 from "../images/OLL-26.PNG";
-import OLL27 from "../images/OLL-27.PNG";
+import OLL20 from "../images/OLL-20.png";
+import OLL19 from "../images/OLL-19.png";
+import OLL18 from "../images/OLL-18.png";
+import OLL17 from "../images/OLL-17.png";
+import OLL04 from "../images/OLL-4.png";
+import OLL03 from "../images/OLL-3.png";
+import OLL02 from "../images/OLL-2.png";
+import OLL01 from "../images/OLL-1.png";
 import data from "../data";
 
 class OLL extends React.Component {
@@ -51,40 +52,40 @@ class OLL extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
-                    name={"OLL21"}
+                    name={"OLL01"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL21}
+                    src={OLL01}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                    name={"OLL22"}
+                    name={"OLL02"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL22}
+                    src={OLL02}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                    name={"OLL23"}
+                    name={"OLL03"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL23}
+                    src={OLL03}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                    name={"OLL24"}
+                    name={"OLL04"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL24}
+                    src={OLL04}
                   />
                 </figure>
               </div>
@@ -93,35 +94,43 @@ class OLL extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                    name={"OLL25"}
+                    name={"OLL17"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL25}
+                    src={OLL17}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                    name={"OLL26"}
+                    name={"OLL20"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL26}
+                    src={OLL20}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                    name={"OLL27"}
+                    name={"OLL18"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL27}
+                    src={OLL18}
                   />
                 </figure>
               </div>
-
-              <div className="column" />
+              <div className="column">
+                <figure className="image is-128x128">
+                  <img
+                    name={"OLL19"}
+                    alt={"OLL Case"}
+                    onClick={this.handleClick}
+                    src={OLL19}
+                  />
+                </figure>
+              </div>
             </div>
           </React.Fragment>
         )}
