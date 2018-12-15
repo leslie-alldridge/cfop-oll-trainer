@@ -21,6 +21,14 @@ class App extends Component {
     
   }
 
+  goBack = () => {
+    this.setState({
+      OLL: true, 
+      NoEdgeOLL: true,
+      CShapes: true
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -32,9 +40,9 @@ class App extends Component {
             </div>
           </div>
         </section>
-       {this.state.OLL && <OLL handlePageChange={this.handlePageChange}/>}
-       {this.state.NoEdgeOLL && <NoEdgeOLL handlePageChange={this.handlePageChange}/>}
-        {this.state.CShapes && <CShapes handlePageChange={this.handlePageChange}/>}
+       {this.state.OLL && <OLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+       {this.state.NoEdgeOLL && <NoEdgeOLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+        {this.state.CShapes && <CShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
       </div>
     );
   }

@@ -14,7 +14,7 @@ class CShapes extends React.Component {
       mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
-    this.goBack = this.goBack.bind(this);
+    this.goBack = this.goBack.bind(this)
   }
 
   handleClick(e) {
@@ -73,7 +73,7 @@ class CShapes extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-            goBack={this.goBack}
+            goBack={() => {this.props.goBack(); this.goBack()}}
             data={found}
             image={this.state.selection}
           />
