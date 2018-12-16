@@ -1,17 +1,19 @@
 import React, { Component } from "react";
+
 import OLL from "./OLL/OLL";
 import NoEdgeOLL from "./OLL/NoEdgeOLL";
 import CShapes from "./OLL/CShapes";
+import IShapes from './OLL/IShapes'
+
 class App extends Component {
   state ={
     OLL: true,
     NoEdgeOLL: true,
-    CShapes: true
+    CShapes: true,
+    IShapes: true
   }
 
-  handlePageChange = (name) => {
-    console.log(name);
-    
+  handlePageChange = (name) => {    
     if (name === 'CShapes'){
       this.setState({
         CShapes: true,
@@ -19,6 +21,12 @@ class App extends Component {
         OLL: false
       })
     } else if (name === 'OLL'){
+      this.setState({
+        CShapes: false,
+        NoEdgeOLL: false,
+        OLL: true
+      })
+    }else if (name === 'IShapes'){
       this.setState({
         CShapes: false,
         NoEdgeOLL: false,
@@ -52,9 +60,11 @@ class App extends Component {
             </div>
           </div>
         </section>
-       {this.state.OLL && <OLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-       {this.state.NoEdgeOLL && <NoEdgeOLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+        {this.state.OLL && <OLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+        {this.state.NoEdgeOLL && <NoEdgeOLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
         {this.state.CShapes && <CShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+        {this.state.IShapes && <IShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+
       </div>
     );
   }
