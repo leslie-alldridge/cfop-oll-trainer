@@ -25,8 +25,9 @@ class OLL extends React.Component {
     this.setState({
       selection: e.target.name,
       showPage: true,
-      mainPage: false
+      mainPage: true
     });
+    this.props.handlePageChange('OLL')
   }
 
   goBack() {
@@ -133,11 +134,11 @@ class OLL extends React.Component {
           </React.Fragment>
         )}
         {this.state.showPage && (
-          <Algorithm
-            goBack={this.goBack}
-            data={found}
-            image={this.state.selection}
-          />
+         <Algorithm
+         goBack={() => {this.props.goBack(); this.goBack()}}
+         data={found}
+         image={this.state.selection}
+       />
         )}
       </div>
     );

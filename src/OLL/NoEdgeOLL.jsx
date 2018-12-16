@@ -26,8 +26,9 @@ class NoEdgeOLL extends React.Component {
     this.setState({
       selection: e.target.name,
       showPage: true,
-      mainPage: false
+      mainPage: true
     });
+    this.props.handlePageChange('NoEdgeOLL')
   }
 
   goBack() {
@@ -144,10 +145,10 @@ class NoEdgeOLL extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-            goBack={this.goBack}
-            data={found}
-            image={this.state.selection}
-          />
+          goBack={() => {this.props.goBack(); this.goBack()}}
+          data={found}
+          image={this.state.selection}
+        />
         )}
       </div>
     );

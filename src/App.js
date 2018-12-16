@@ -11,14 +11,26 @@ class App extends Component {
 
   handlePageChange = (name) => {
     console.log(name);
+    
     if (name === 'CShapes'){
       this.setState({
         CShapes: true,
         NoEdgeOLL: false,
         OLL: false
       })
+    } else if (name === 'OLL'){
+      this.setState({
+        CShapes: false,
+        NoEdgeOLL: false,
+        OLL: true
+      })
+    } else {
+      this.setState({
+        CShapes: false,
+        NoEdgeOLL: true,
+        OLL: false
+      })
     }
-    
   }
 
   goBack = () => {
