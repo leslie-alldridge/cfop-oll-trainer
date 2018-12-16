@@ -15,46 +15,14 @@ class App extends Component {
     LShapes: true
   }
 
-  handlePageChange = (name) => {    
-    if (name === 'CShapes'){
-      this.setState({
-        CShapes: true,
-        NoEdgeOLL: false,
-        OLL: false,
-        IShapes: false
-
-      })
-    } else if (name === 'OLL'){
-      this.setState({
-        CShapes: false,
-        NoEdgeOLL: false,
-        OLL: true,
-        IShapes: false
-
-      })
-    }else if (name === 'IShapes'){
-      this.setState({
-        CShapes: false,
-        NoEdgeOLL: false,
-        OLL: false,
-        IShapes: true
-      })
-    } else {
-      this.setState({
-        CShapes: false,
-        NoEdgeOLL: true,
-        OLL: false,
-        IShapes: false
-      })
+  handlePageChange = (name) => {  
+    Object.keys(this.state).map(
+      i => i === name ? this.setState({[name]: true}) : this.setState({[i]: false}))
     }
-  }
 
   goBack = () => {
-    this.setState({
-      OLL: true, 
-      NoEdgeOLL: true,
-      CShapes: true
-    })
+    Object.keys(this.state).map(
+      i => this.setState({ [i]: true }))
   }
 
   render() {
