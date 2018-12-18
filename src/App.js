@@ -7,6 +7,7 @@ import IShapes from './OLL/IShapes';
 import LShapes from './OLL/LShapes';
 import PShapes from './OLL/PShapes';
 import TShapes from './OLL/TShapes';
+import WShapes from './OLL/WShapes';
 
 class App extends Component {
   state ={
@@ -16,7 +17,8 @@ class App extends Component {
     IShapes: true,
     LShapes: true,
     PShapes: true,
-    TShapes: true
+    TShapes: true,
+    WShapes: true
   }
 
   handlePageChange = (name) => {  
@@ -47,6 +49,8 @@ class App extends Component {
         {this.state.LShapes && <LShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
         {this.state.PShapes && <PShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
         {this.state.TShapes && <TShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+        {this.state.WShapes && <WShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+
       </div>
     );
   }
