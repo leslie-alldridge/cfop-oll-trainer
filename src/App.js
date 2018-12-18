@@ -5,7 +5,8 @@ import NoEdgeOLL from "./OLL/NoEdgeOLL";
 import CShapes from "./OLL/CShapes";
 import IShapes from './OLL/IShapes';
 import LShapes from './OLL/LShapes';
-import PShapes from './OLL/PShapes'
+import PShapes from './OLL/PShapes';
+import TShapes from './OLL/TShapes';
 
 class App extends Component {
   state ={
@@ -14,7 +15,8 @@ class App extends Component {
     CShapes: true,
     IShapes: true,
     LShapes: true,
-    PShapes: true
+    PShapes: true,
+    TShapes: true
   }
 
   handlePageChange = (name) => {  
@@ -44,6 +46,7 @@ class App extends Component {
         {this.state.IShapes && <IShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
         {this.state.LShapes && <LShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
         {this.state.PShapes && <PShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
+        {this.state.TShapes && <TShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
       </div>
     );
   }
