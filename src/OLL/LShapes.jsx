@@ -1,5 +1,5 @@
 import React from "react";
-import Algorithm from "../Algorithm";
+import Algorithm from "../OtherPages/Algorithm";
 
 import OLL47 from "../images/OLL-47.png";
 import OLL48 from "../images/OLL-48.png";
@@ -8,7 +8,7 @@ import OLL50 from "../images/OLL-50.png";
 import OLL53 from "../images/OLL-53.png";
 import OLL54 from "../images/OLL-54.png";
 
-import data from "../LShapesData";
+import data from "../Data/LShapesData";
 
 class LShapes extends React.Component {
   constructor(props) {

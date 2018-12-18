@@ -1,5 +1,5 @@
 import React from "react";
-import Algorithm from "../Algorithm";
+import Algorithm from "../OtherPages/Algorithm";
 import OLL20 from "../images/OLL-20.png";
 import OLL19 from "../images/OLL-19.png";
 import OLL18 from "../images/OLL-18.png";
@@ -8,7 +8,7 @@ import OLL04 from "../images/OLL-4.png";
 import OLL03 from "../images/OLL-3.png";
 import OLL02 from "../images/OLL-2.png";
 import OLL01 from "../images/OLL-1.png";
-import data from "../noEdgesData";
+import data from "../Data/noEdgesData";
 
 class NoEdgeOLL extends React.Component {
   constructor(props) {

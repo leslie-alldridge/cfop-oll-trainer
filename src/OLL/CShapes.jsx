@@ -1,9 +1,9 @@
 import React from "react";
-import Algorithm from "../Algorithm";
+import Algorithm from "../OtherPages/Algorithm";
 import OLL34 from "../images/OLL-34.png";
 import OLL46 from "../images/OLL-46.png";
 
-import data from "../cShapesData";
+import data from "../Data/cShapesData";
 
 class CShapes extends React.Component {
   constructor(props) {

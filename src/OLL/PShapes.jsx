@@ -1,12 +1,12 @@
 import React from "react";
-import Algorithm from "../Algorithm";
+import Algorithm from "../OtherPages/Algorithm";
 
 import OLL44 from "../images/OLL-44.PNG";
 import OLL43 from "../images/OLL-43.PNG";
 import OLL32 from "../images/OLL-32.PNG";
 import OLL31 from "../images/OLL-31.PNG";
 
-import data from "../PShapesData";
+import data from "../Data/PShapesData";
 
 class IShapes extends React.Component {
   constructor(props) {
