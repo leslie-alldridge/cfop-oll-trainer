@@ -22,7 +22,7 @@ class App extends Component {
     TShapes: true,
     WShapes: true,
     Awkward: true,
-    PShapes: true
+    FishShapes: true
   };
 
   handlePageChange = name => {
@@ -100,7 +100,7 @@ class App extends Component {
           />
         )}
         {this.state.FishShapes && (
-          <Awkward
+          <FishShapes
             goBack={this.goBack}
             handlePageChange={this.handlePageChange}
           />
