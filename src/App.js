@@ -3,15 +3,16 @@ import React, { Component } from "react";
 import OLL from "./OLL/OLL";
 import NoEdgeOLL from "./OLL/NoEdgeOLL";
 import CShapes from "./OLL/CShapes";
-import IShapes from './OLL/IShapes';
-import LShapes from './OLL/LShapes';
-import PShapes from './OLL/PShapes';
-import TShapes from './OLL/TShapes';
-import WShapes from './OLL/WShapes';
-import Awkward from './OLL/Awkward';
+import IShapes from "./OLL/IShapes";
+import LShapes from "./OLL/LShapes";
+import PShapes from "./OLL/PShapes";
+import TShapes from "./OLL/TShapes";
+import WShapes from "./OLL/WShapes";
+import Awkward from "./OLL/Awkward";
+import FishShapes from "./OLL/FishShapes";
 
 class App extends Component {
-  state ={
+  state = {
     OLL: true,
     NoEdgeOLL: true,
     CShapes: true,
@@ -20,18 +21,21 @@ class App extends Component {
     PShapes: true,
     TShapes: true,
     WShapes: true,
-    Awkward: true
-  }
+    Awkward: true,
+    PShapes: true
+  };
 
-  handlePageChange = (name) => {  
-    Object.keys(this.state).map(
-      i => i === name ? this.setState({[name]: true}) : this.setState({[i]: false}))
-    }
+  handlePageChange = name => {
+    Object.keys(this.state).map(i =>
+      i === name
+        ? this.setState({ [name]: true })
+        : this.setState({ [i]: false })
+    );
+  };
 
   goBack = () => {
-    Object.keys(this.state).map(
-      i => this.setState({ [i]: true }))
-  }
+    Object.keys(this.state).map(i => this.setState({ [i]: true }));
+  };
 
   render() {
     return (
@@ -44,16 +48,63 @@ class App extends Component {
             </div>
           </div>
         </section>
-        {this.state.OLL && <OLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.NoEdgeOLL && <NoEdgeOLL goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.CShapes && <CShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.IShapes && <IShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.LShapes && <LShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.PShapes && <PShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.TShapes && <TShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.WShapes && <WShapes goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-        {this.state.Awkward && <Awkward goBack={this.goBack} handlePageChange={this.handlePageChange}/>}
-
+        {this.state.OLL && (
+          <OLL goBack={this.goBack} handlePageChange={this.handlePageChange} />
+        )}
+        {this.state.NoEdgeOLL && (
+          <NoEdgeOLL
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.CShapes && (
+          <CShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.IShapes && (
+          <IShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.LShapes && (
+          <LShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.PShapes && (
+          <PShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.TShapes && (
+          <TShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.WShapes && (
+          <WShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.Awkward && (
+          <Awkward
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.FishShapes && (
+          <Awkward
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
       </div>
     );
   }
