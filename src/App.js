@@ -10,6 +10,7 @@ import TShapes from "./OLL/TShapes";
 import WShapes from "./OLL/WShapes";
 import Awkward from "./OLL/Awkward";
 import FishShapes from "./OLL/FishShapes";
+import KnightShapes from "./OLL/KnightShapes";
 
 class App extends Component {
   state = {
@@ -22,7 +23,8 @@ class App extends Component {
     TShapes: true,
     WShapes: true,
     Awkward: true,
-    FishShapes: true
+    FishShapes: true,
+    KnightShapes: true
   };
 
   handlePageChange = name => {
@@ -101,6 +103,12 @@ class App extends Component {
         )}
         {this.state.FishShapes && (
           <FishShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.KnightShapes && (
+          <KnightShapes
             goBack={this.goBack}
             handlePageChange={this.handlePageChange}
           />
