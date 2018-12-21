@@ -12,6 +12,7 @@ import Awkward from "./OLL/Awkward";
 import FishShapes from "./OLL/FishShapes";
 import KnightShapes from "./OLL/KnightShapes";
 import BigBolts from './OLL/BigBolts';
+import SmallBolts from './OLL/SmallBolts';
 
 class App extends Component {
   state = {
@@ -26,7 +27,8 @@ class App extends Component {
     Awkward: true,
     FishShapes: true,
     KnightShapes: true,
-    BigBolts: true
+    BigBolts: true,
+    SmallBolts: true
   };
 
   handlePageChange = name => {
@@ -117,6 +119,12 @@ class App extends Component {
         )}
          {this.state.BigBolts && (
           <BigBolts
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+         {this.state.SmallBolts && (
+          <SmallBolts
             goBack={this.goBack}
             handlePageChange={this.handlePageChange}
           />
