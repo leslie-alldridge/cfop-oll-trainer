@@ -1,10 +1,10 @@
 import React from "react";
 import Algorithm from "../OtherPages/Algorithm";
 
-import OLL40 from "../images/OLL-40.PNG";
-import OLL39 from "../images/OLL-39.PNG";
+import OLL28 from "../images/OLL-28.PNG";
+import OLL57 from "../images/OLL-57.PNG";
 
-import data from "../Data/BigBoltsData";
+import data from "../Data/ArrowHShapesData";
 
 class BigBolts extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class BigBolts extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange("BigBolts");
+    this.props.handlePageChange("ArrowHShapes");
   }
 
   goBack() {
@@ -43,16 +43,16 @@ class BigBolts extends React.Component {
       <div className="container">
         {this.state.mainPage && (
           <React.Fragment>
-            <p className="title is-3">Big Bolts Shapes</p>
+            <p className="title is-3">Arrow &nbsp; H Shapes</p>
             <div className="columns is-mobile algContainer">
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
                     className="grow"
-                    name={"OLL40"}
+                    name={"OLL28"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL40}
+                    src={OLL28}
                   />
                 </figure>
               </div>
@@ -60,10 +60,10 @@ class BigBolts extends React.Component {
                 <figure className="image is-128x128">
                   <img
                     className="grow"
-                    name={"OLL39"}
+                    name={"OLL57"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
-                    src={OLL39}
+                    src={OLL57}
                   />
                 </figure>
               </div>

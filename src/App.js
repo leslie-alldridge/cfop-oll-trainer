@@ -14,6 +14,7 @@ import KnightShapes from "./OLL/KnightShapes";
 import BigBolts from "./OLL/BigBolts";
 import SmallBolts from "./OLL/SmallBolts";
 import SquareShapes from "./OLL/SquareShapes";
+import ArrowHShapes from "./OLL/ArrowHShapes";
 
 class App extends Component {
   state = {
@@ -30,7 +31,8 @@ class App extends Component {
     KnightShapes: true,
     BigBolts: true,
     SmallBolts: true,
-    SquareShapes: true
+    SquareShapes: true,
+    ArrowHShapes: true
   };
 
   handlePageChange = name => {
@@ -133,6 +135,12 @@ class App extends Component {
         )}
         {this.state.SquareShapes && (
           <SquareShapes
+            goBack={this.goBack}
+            handlePageChange={this.handlePageChange}
+          />
+        )}
+        {this.state.ArrowHShapes && (
+          <ArrowHShapes
             goBack={this.goBack}
             handlePageChange={this.handlePageChange}
           />
