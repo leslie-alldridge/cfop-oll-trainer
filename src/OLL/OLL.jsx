@@ -57,6 +57,7 @@ class OLL extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL21}
+                    id={this.state.selection === 'OLL21' ? 'activeAlg' : null}
                   />
                 </figure>
               </div>
@@ -68,6 +69,7 @@ class OLL extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL22}
+                    id={this.state.selection === 'OLL22' ? 'activeAlg' : null}
                   />
                 </figure>
               </div>
@@ -79,6 +81,8 @@ class OLL extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL23}
+                    id={this.state.selection === 'OLL23' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -90,6 +94,8 @@ class OLL extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL24}
+                    id={this.state.selection === 'OLL24' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -103,6 +109,8 @@ class OLL extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL25}
+                    id={this.state.selection === 'OLL25' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -114,6 +122,8 @@ class OLL extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL26}
+                    id={this.state.selection === 'OLL26' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -125,6 +135,7 @@ class OLL extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL27}
+                    id={this.state.selection === 'OLL27' ? 'activeAlg' : null}
                   />
                 </figure>
               </div>
