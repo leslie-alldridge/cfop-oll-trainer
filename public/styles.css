@@ -12,3 +12,15 @@
 #activeAlg {
   box-shadow: 10px 10px 5px rgb(173, 173, 173);
 }
+
+#liAlgs {
+  margin: 1%;
+}
+
+#bodyContent {
+  padding: 5%;
+}
+
+#buttonSession {
+  margin-right: 2%;
+}

@@ -58,93 +58,98 @@ class App extends Component {
             </div>
           </div>
         </section>
-        {this.state.OLL && (
-          <OLL goBack={this.goBack} handlePageChange={this.handlePageChange} />
-        )}
-        {this.state.NoEdgeOLL && (
-          <NoEdgeOLL
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.CShapes && (
-          <CShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.IShapes && (
-          <IShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.LShapes && (
-          <LShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.PShapes && (
-          <PShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.TShapes && (
-          <TShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.WShapes && (
-          <WShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.Awkward && (
-          <Awkward
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.FishShapes && (
-          <FishShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.KnightShapes && (
-          <KnightShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.BigBolts && (
-          <BigBolts
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.SmallBolts && (
-          <SmallBolts
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.SquareShapes && (
-          <SquareShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
-        {this.state.ArrowHShapes && (
-          <ArrowHShapes
-            goBack={this.goBack}
-            handlePageChange={this.handlePageChange}
-          />
-        )}
+        <div id="bodyContent">
+          {this.state.OLL && (
+            <OLL
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.NoEdgeOLL && (
+            <NoEdgeOLL
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.CShapes && (
+            <CShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.IShapes && (
+            <IShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.LShapes && (
+            <LShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.PShapes && (
+            <PShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.TShapes && (
+            <TShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.WShapes && (
+            <WShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.Awkward && (
+            <Awkward
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.FishShapes && (
+            <FishShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.KnightShapes && (
+            <KnightShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.BigBolts && (
+            <BigBolts
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.SmallBolts && (
+            <SmallBolts
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.SquareShapes && (
+            <SquareShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+          {this.state.ArrowHShapes && (
+            <ArrowHShapes
+              goBack={this.goBack}
+              handlePageChange={this.handlePageChange}
+            />
+          )}
+        </div>
       </div>
     );
   }

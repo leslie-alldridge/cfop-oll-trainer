@@ -36,38 +36,60 @@ class Algorithm extends Component {
     return (
       <div>
         {console.log(this.props)}
-        <h3 className="title is-3">
-          You're currently viewing {this.props.image}
-        </h3>
-        <p>Pick your preferred algorithm and a session type</p>
+        <h3 className="title is-3">Currently Viewing: {this.props.image}</h3>
+        <p>
+          <b>Pick your preferred algorithm and a session type</b>
+        </p>
+        <br />
         <p>Algorithms</p>
-        <p>Please pick an algorithm below</p>
-        {this.state.alg !== "" && <p>You picked {this.state.alg}</p>}
+        {this.state.alg !== "" && (
+          <p>
+            <b>Selected: {this.state.alg}</b>
+          </p>
+        )}
         <ul>
           {this.props.data.alg.map(item => {
-            console.log(item);
-
             return (
-              <li onClick={item => this.handleChange(item)} name={item}>
+              <li
+                className={"button is-primary"}
+                onClick={item => this.handleChange(item)}
+                name={item}
+                id="liAlgs"
+              >
                 {item}
               </li>
             );
           })}
         </ul>
-        {this.state.selected === true ? (
-          <p>Session Type</p>
-        ) : (
-          <p>Please pick an algorithm to practice</p>
+        <p>Session Type</p>
+
+        {this.state.selected !== false && (
+          <button
+            id="buttonSession"
+            className={"button is-link"}
+            onClick={this.handleDrills}
+          >
+            Drills
+          </button>
         )}
         {this.state.selected !== false && (
-          <button onClick={this.handleDrills}>Drills</button>
-        )}
-        {this.state.selected !== false && (
-          <button onClick={this.handleTimer}>Time Based</button>
+          <button
+            id="buttonSession"
+            className={"button is-link"}
+            onClick={this.handleTimer}
+          >
+            Time Based
+          </button>
         )}
         {this.state.timer && <Timer />}
         {this.state.drills && <Drills />}
-        <button onClick={this.props.goBack}>Back</button>
+        <button
+          id="buttonSession"
+          className={"button is-link"}
+          onClick={this.props.goBack}
+        >
+          Back
+        </button>
       </div>
     );
   }

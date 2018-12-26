@@ -46,7 +46,6 @@ class OLL extends React.Component {
       <div className="container">
         {this.state.mainPage && (
           <React.Fragment>
-            <h3 className="title is-4">Please pick an OLL below</h3>
             <p className="title is-3">All Edges Correctly Oriented</p>
             <div className="columns is-mobile algContainer">
               <div className="column ">
