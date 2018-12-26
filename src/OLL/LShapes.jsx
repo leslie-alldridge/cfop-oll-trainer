@@ -58,6 +58,8 @@ class LShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL48}
+                    id={this.state.selection === 'OLL48' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -70,6 +72,8 @@ class LShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL47}
+                    id={this.state.selection === 'OLL47' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -82,6 +86,8 @@ class LShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL54}
+                    id={this.state.selection === 'OLL54' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -94,6 +100,8 @@ class LShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL53}
+                    id={this.state.selection === 'OLL53' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -107,6 +115,8 @@ class LShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL49}
+                    id={this.state.selection === 'OLL49' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -118,6 +128,8 @@ class LShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL50}
+                    id={this.state.selection === 'OLL50' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>

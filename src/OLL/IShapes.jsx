@@ -56,6 +56,8 @@ class IShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL55}
+                    id={this.state.selection === 'OLL55' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -68,6 +70,8 @@ class IShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL52}
+                    id={this.state.selection === 'OLL52' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -80,6 +84,8 @@ class IShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL51}
+                    id={this.state.selection === 'OLL51' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -92,6 +98,8 @@ class IShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL56}
+                    id={this.state.selection === 'OLL56' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>

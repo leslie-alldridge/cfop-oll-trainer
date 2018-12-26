@@ -56,6 +56,8 @@ class Awkward extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL30}
+                    id={this.state.selection === 'OLL30' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -68,6 +70,8 @@ class Awkward extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL29}
+                    id={this.state.selection === 'OLL29' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -80,6 +84,8 @@ class Awkward extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL41}
+                    id={this.state.selection === 'OLL41' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -92,6 +98,8 @@ class Awkward extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL42}
+                    id={this.state.selection === 'OLL42' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>

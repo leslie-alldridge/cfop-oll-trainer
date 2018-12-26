@@ -55,6 +55,8 @@ class BigBolts extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL40}
+                    id={this.state.selection === 'OLL40' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -67,6 +69,8 @@ class BigBolts extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL39}
+                    id={this.state.selection === 'OLL39' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>

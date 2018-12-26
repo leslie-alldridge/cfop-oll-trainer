@@ -53,6 +53,8 @@ class CShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL34}
+                    id={this.state.selection === 'OLL34' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
@@ -65,6 +67,8 @@ class CShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL46}
+                    id={this.state.selection === 'OLL46' ? 'activeAlg' : null}
+
                   />
                 </figure>
               </div>
