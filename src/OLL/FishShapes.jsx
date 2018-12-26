@@ -55,8 +55,7 @@ class FishShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL09}
-                    id={this.state.selection === 'OLL09' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL09" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -68,8 +67,7 @@ class FishShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL10}
-                    id={this.state.selection === 'OLL10' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL10" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -81,8 +79,7 @@ class FishShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL35}
-                    id={this.state.selection === 'OLL35' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL35" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -94,8 +91,7 @@ class FishShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL37}
-                    id={this.state.selection === 'OLL37' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL37" ? "activeAlg" : null}
                   />
                 </figure>
               </div>

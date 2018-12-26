@@ -15,7 +15,7 @@ class TShapes extends React.Component {
       mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
-    this.goBack = this.goBack.bind(this)
+    this.goBack = this.goBack.bind(this);
   }
 
   handleClick(e) {
@@ -24,7 +24,7 @@ class TShapes extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange('TShapes')
+    this.props.handlePageChange("TShapes");
   }
 
   goBack() {
@@ -48,28 +48,24 @@ class TShapes extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
-                 
-                  className="grow"
+                    className="grow"
                     name={"OLL45"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL45}
                     id={this.state.selection === "OLL45" ? "activeAlg" : null}
-
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL33"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL33}
                     id={this.state.selection === "OLL33" ? "activeAlg" : null}
-
                   />
                 </figure>
               </div>
@@ -78,7 +74,10 @@ class TShapes extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-            goBack={() => {this.props.goBack(); this.goBack()}}
+            goBack={() => {
+              this.props.goBack();
+              this.goBack();
+            }}
             data={found}
             image={this.state.selection}
           />

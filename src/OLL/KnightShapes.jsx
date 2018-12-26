@@ -55,8 +55,7 @@ class KnightShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL13}
-                    id={this.state.selection === 'OLL13' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL13" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -68,8 +67,7 @@ class KnightShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL14}
-                    id={this.state.selection === 'OLL14' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL14" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -81,8 +79,7 @@ class KnightShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL15}
-                    id={this.state.selection === 'OLL15' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL15" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -94,8 +91,7 @@ class KnightShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL16}
-                    id={this.state.selection === 'OLL16' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL16" ? "activeAlg" : null}
                   />
                 </figure>
               </div>

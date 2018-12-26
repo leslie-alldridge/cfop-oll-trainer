@@ -27,7 +27,7 @@ class OLL extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange('OLL')
+    this.props.handlePageChange("OLL");
   }
 
   goBack() {
@@ -52,50 +52,48 @@ class OLL extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
-                  className="grow"
+                    className="grow"
                     name={"OLL21"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL21}
-                    id={this.state.selection === 'OLL21' ? 'activeAlg' : null}
+                    id={this.state.selection === "OLL21" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL22"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL22}
-                    id={this.state.selection === 'OLL22' ? 'activeAlg' : null}
+                    id={this.state.selection === "OLL22" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                  className="grow"
+                    className="grow"
                     name={"OLL23"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL23}
-                    id={this.state.selection === 'OLL23' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL23" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                  className="grow"
+                    className="grow"
                     name={"OLL24"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL24}
-                    id={this.state.selection === 'OLL24' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL24" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -104,38 +102,36 @@ class OLL extends React.Component {
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                  className="grow"
+                    className="grow"
                     name={"OLL25"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL25}
-                    id={this.state.selection === 'OLL25' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL25" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                  className="grow"
+                    className="grow"
                     name={"OLL26"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL26}
-                    id={this.state.selection === 'OLL26' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL26" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                  className="grow"
+                    className="grow"
                     name={"OLL27"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL27}
-                    id={this.state.selection === 'OLL27' ? 'activeAlg' : null}
+                    id={this.state.selection === "OLL27" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -145,11 +141,14 @@ class OLL extends React.Component {
           </React.Fragment>
         )}
         {this.state.showPage && (
-         <Algorithm
-         goBack={() => {this.props.goBack(); this.goBack()}}
-         data={found}
-         image={this.state.selection}
-       />
+          <Algorithm
+            goBack={() => {
+              this.props.goBack();
+              this.goBack();
+            }}
+            data={found}
+            image={this.state.selection}
+          />
         )}
       </div>
     );

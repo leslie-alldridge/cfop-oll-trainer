@@ -15,7 +15,7 @@ class WShapes extends React.Component {
       mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
-    this.goBack = this.goBack.bind(this)
+    this.goBack = this.goBack.bind(this);
   }
 
   handleClick(e) {
@@ -24,7 +24,7 @@ class WShapes extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange('WShapes')
+    this.props.handlePageChange("WShapes");
   }
 
   goBack() {
@@ -48,28 +48,24 @@ class WShapes extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
-                 
-                  className="grow"
+                    className="grow"
                     name={"OLL38"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL38}
                     id={this.state.selection === "OLL38" ? "activeAlg" : null}
-
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL36"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL36}
                     id={this.state.selection === "OLL36" ? "activeAlg" : null}
-
                   />
                 </figure>
               </div>
@@ -78,7 +74,10 @@ class WShapes extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-            goBack={() => {this.props.goBack(); this.goBack()}}
+            goBack={() => {
+              this.props.goBack();
+              this.goBack();
+            }}
             data={found}
             image={this.state.selection}
           />

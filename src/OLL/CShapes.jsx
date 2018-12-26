@@ -14,7 +14,7 @@ class CShapes extends React.Component {
       mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
-    this.goBack = this.goBack.bind(this)
+    this.goBack = this.goBack.bind(this);
   }
 
   handleClick(e) {
@@ -23,7 +23,7 @@ class CShapes extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange('CShapes')
+    this.props.handlePageChange("CShapes");
   }
 
   goBack() {
@@ -47,28 +47,24 @@ class CShapes extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
-                 
-                  className="grow"
+                    className="grow"
                     name={"OLL34"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL34}
-                    id={this.state.selection === 'OLL34' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL34" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL46"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL46}
-                    id={this.state.selection === 'OLL46' ? 'activeAlg' : null}
-
+                    id={this.state.selection === "OLL46" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -77,7 +73,10 @@ class CShapes extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-            goBack={() => {this.props.goBack(); this.goBack()}}
+            goBack={() => {
+              this.props.goBack();
+              this.goBack();
+            }}
             data={found}
             image={this.state.selection}
           />

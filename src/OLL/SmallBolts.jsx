@@ -17,7 +17,7 @@ class SmallBolts extends React.Component {
       mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
-    this.goBack = this.goBack.bind(this)
+    this.goBack = this.goBack.bind(this);
   }
 
   handleClick(e) {
@@ -26,7 +26,7 @@ class SmallBolts extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange('SmallBolts')
+    this.props.handlePageChange("SmallBolts");
   }
 
   goBack() {
@@ -50,56 +50,48 @@ class SmallBolts extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
-                 
-                  className="grow"
+                    className="grow"
                     name={"OLL08"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL08}
-                                        id={this.state.selection === "OLL08" ? "activeAlg" : null}
-
+                    id={this.state.selection === "OLL08" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL07"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL07}
-                                        id={this.state.selection === "OLL07" ? "activeAlg" : null}
-
+                    id={this.state.selection === "OLL07" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL12"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL12}
-                                        id={this.state.selection === "OLL12" ? "activeAlg" : null}
-
+                    id={this.state.selection === "OLL12" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL11"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL11}
-                                        id={this.state.selection === "OLL11" ? "activeAlg" : null}
-
+                    id={this.state.selection === "OLL11" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -108,7 +100,10 @@ class SmallBolts extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-            goBack={() => {this.props.goBack(); this.goBack()}}
+            goBack={() => {
+              this.props.goBack();
+              this.goBack();
+            }}
             data={found}
             image={this.state.selection}
           />
