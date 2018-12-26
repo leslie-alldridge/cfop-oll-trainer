@@ -11,9 +11,11 @@ Modes for 'Random' OLL's
 
 ### Todos
 
-Add styling for components and toggle render
-Make the timer page full screen and really user friendly
-Have the algs easy to see on screen so the user can sit back and still see it.
+- When user selects drills or timer, hide the rest of the page so they can focus on it
+- Check the feliks zemdegs algs to make sure they'll all there
+- Better titles and subtitles
+- Make the timer page full screen and really user friendly
+- Have the algs easy to see on screen so the user can sit back and still see it.
 
 Images link
 http://www.rubiksplace.com/speedcubing/OLL-algorithms/
