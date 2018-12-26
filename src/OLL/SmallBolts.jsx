@@ -56,6 +56,8 @@ class SmallBolts extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL08}
+                                        id={this.state.selection === "OLL08" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>
@@ -68,6 +70,8 @@ class SmallBolts extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL07}
+                                        id={this.state.selection === "OLL07" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>
@@ -80,6 +84,8 @@ class SmallBolts extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL12}
+                                        id={this.state.selection === "OLL12" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>
@@ -92,6 +98,8 @@ class SmallBolts extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL11}
+                                        id={this.state.selection === "OLL11" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>

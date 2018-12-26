@@ -28,7 +28,7 @@ class NoEdgeOLL extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange('NoEdgeOLL')
+    this.props.handlePageChange("NoEdgeOLL");
   }
 
   goBack() {
@@ -52,45 +52,49 @@ class NoEdgeOLL extends React.Component {
             <div className="columns is-mobile algContainer">
               <div className="column ">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL01"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL01}
+                    id={this.state.selection === "OLL01" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL02"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL02}
+                    id={this.state.selection === "OLL02" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL03"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL03}
+                    id={this.state.selection === "OLL03" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL04"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL04}
+                    id={this.state.selection === "OLL04" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -98,45 +102,49 @@ class NoEdgeOLL extends React.Component {
             <div className="columns">
               <div className="column">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL17"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL17}
+                    id={this.state.selection === "OLL17" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL20"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL20}
+                    id={this.state.selection === "OLL20" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL18"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL18}
+                    id={this.state.selection === "OLL18" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
-                 <img
-                  className="grow"
+                  <img
+                    className="grow"
                     name={"OLL19"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL19}
+                    id={this.state.selection === "OLL48" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -145,10 +153,13 @@ class NoEdgeOLL extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-          goBack={() => {this.props.goBack(); this.goBack()}}
-          data={found}
-          image={this.state.selection}
-        />
+            goBack={() => {
+              this.props.goBack();
+              this.goBack();
+            }}
+            data={found}
+            image={this.state.selection}
+          />
         )}
       </div>
     );

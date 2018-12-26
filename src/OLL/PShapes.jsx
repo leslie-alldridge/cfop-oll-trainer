@@ -17,7 +17,7 @@ class IShapes extends React.Component {
       mainPage: true
     };
     this.handleClick = this.handleClick.bind(this);
-    this.goBack = this.goBack.bind(this)
+    this.goBack = this.goBack.bind(this);
   }
 
   handleClick(e) {
@@ -26,7 +26,7 @@ class IShapes extends React.Component {
       showPage: true,
       mainPage: true
     });
-    this.props.handlePageChange('PShapes')
+    this.props.handlePageChange("PShapes");
   }
 
   goBack() {
@@ -50,48 +50,48 @@ class IShapes extends React.Component {
               <div className="column ">
                 <figure className="image is-128x128">
                   <img
-                 
-                  className="grow"
+                    className="grow"
                     name={"OLL44"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL44}
+                    id={this.state.selection === "OLL44" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL43"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL43}
+                    id={this.state.selection === "OLL43" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL32"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL32}
+                    id={this.state.selection === "OLL32" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
               <div className="column">
                 <figure className="image is-128x128">
                   <img
-                
-                  className="grow"
+                    className="grow"
                     name={"OLL31"}
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL31}
+                    id={this.state.selection === "OLL31" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -100,7 +100,10 @@ class IShapes extends React.Component {
         )}
         {this.state.showPage && (
           <Algorithm
-            goBack={() => {this.props.goBack(); this.goBack()}}
+            goBack={() => {
+              this.props.goBack();
+              this.goBack();
+            }}
             data={found}
             image={this.state.selection}
           />

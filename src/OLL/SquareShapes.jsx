@@ -53,6 +53,7 @@ class SquareShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL06}
+                    id={this.state.selection === "OLL06" ? "activeAlg" : null}
                   />
                 </figure>
               </div>
@@ -64,6 +65,7 @@ class SquareShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL05}
+                    id={this.state.selection === "OLL05" ? "activeAlg" : null}
                   />
                 </figure>
               </div>

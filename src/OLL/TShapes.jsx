@@ -54,6 +54,8 @@ class TShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL45}
+                    id={this.state.selection === "OLL45" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>
@@ -66,6 +68,8 @@ class TShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL33}
+                    id={this.state.selection === "OLL33" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>

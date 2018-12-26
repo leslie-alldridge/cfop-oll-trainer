@@ -54,6 +54,8 @@ class WShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL38}
+                    id={this.state.selection === "OLL38" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>
@@ -66,6 +68,8 @@ class WShapes extends React.Component {
                     alt={"OLL Case"}
                     onClick={this.handleClick}
                     src={OLL36}
+                    id={this.state.selection === "OLL36" ? "activeAlg" : null}
+
                   />
                 </figure>
               </div>
