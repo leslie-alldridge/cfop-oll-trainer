@@ -7,20 +7,23 @@ class Algorithm extends Component {
     drills: false,
     timer: false,
     alg: "",
-    selected: false
+    selected: false,
+    hide: false
   };
 
   handleDrills = () => {
     this.setState({
       timer: false,
-      drills: true
+      drills: true,
+      hide: true
     });
   };
 
   handleTimer = () => {
     this.setState({
       timer: true,
-      drills: false
+      drills: false,
+      hide: true
     });
   };
 
@@ -35,61 +38,66 @@ class Algorithm extends Component {
   render() {
     return (
       <div>
-        {console.log(this.props)}
-        <h3 className="title is-3">Currently Viewing: {this.props.image}</h3>
-        <p>
-          <b>Pick your preferred algorithm and a session type</b>
-        </p>
-        <br />
-        <p>Algorithms</p>
-        {this.state.alg !== "" && (
-          <p>
-            <b>Selected: {this.state.alg}</b>
-          </p>
-        )}
-        <ul>
-          {this.props.data.alg.map(item => {
-            return (
-              <li
-                className={"button is-primary"}
-                onClick={item => this.handleChange(item)}
-                name={item}
-                id="liAlgs"
-              >
-                {item}
-              </li>
-            );
-          })}
-        </ul>
-        <p>Session Type</p>
+        {this.state.hide === false && (
+          <React.Fragment>
+            <h3 className="title is-3">
+              Currently Viewing: {this.props.image}
+            </h3>
+            <p>
+              <b>Pick your preferred algorithm and a session type</b>
+            </p>
+            <br />
+            <p>Algorithms</p>
+            {this.state.alg !== "" && (
+              <p>
+                <b>Selected: {this.state.alg}</b>
+              </p>
+            )}
+            <ul>
+              {this.props.data.alg.map(item => {
+                return (
+                  <li
+                    className={"button is-primary"}
+                    onClick={item => this.handleChange(item)}
+                    name={item}
+                    id="liAlgs"
+                  >
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+            <p>Session Type</p>
 
-        {this.state.selected !== false && (
-          <button
-            id="buttonSession"
-            className={"button is-link"}
-            onClick={this.handleDrills}
-          >
-            Drills
-          </button>
+            {this.state.selected !== false && (
+              <button
+                id="buttonSession"
+                className={"button is-link"}
+                onClick={this.handleDrills}
+              >
+                Drills
+              </button>
+            )}
+            {this.state.selected !== false && (
+              <button
+                id="buttonSession"
+                className={"button is-link"}
+                onClick={this.handleTimer}
+              >
+                Time Based
+              </button>
+            )}
+            {this.state.timer && <Timer />}
+            {this.state.drills && <Drills />}
+            <button
+              id="buttonSession"
+              className={"button is-link"}
+              onClick={this.props.goBack}
+            >
+              Back
+            </button>
+          </React.Fragment>
         )}
-        {this.state.selected !== false && (
-          <button
-            id="buttonSession"
-            className={"button is-link"}
-            onClick={this.handleTimer}
-          >
-            Time Based
-          </button>
-        )}
-        {this.state.timer && <Timer />}
-        {this.state.drills && <Drills />}
-        <button
-          id="buttonSession"
-          className={"button is-link"}
-          onClick={this.props.goBack}
-        >
-          Back
-        </button>
       </div>
     );
   }
