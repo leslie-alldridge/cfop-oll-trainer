@@ -43,6 +43,8 @@ class TShapes extends React.Component {
       <div className="container">
         {this.state.mainPage && (
           <React.Fragment>
+            <hr />
+
             <p className="title is-3">T Shapes</p>
             <div className="columns is-mobile algContainer">
               <div className="column ">

@@ -44,7 +44,7 @@ class BigBolts extends React.Component {
         {this.state.mainPage && (
           <React.Fragment>
             <hr />
-            <p className="title is-3">Arrow &nbsp; H Shapes</p>
+            <p className="title is-3">Arrow &amp; H Shapes</p>
             <div className="columns is-mobile algContainer">
               <div className="column ">
                 <figure className="image is-128x128">
@@ -71,6 +71,7 @@ class BigBolts extends React.Component {
                 </figure>
               </div>
             </div>
+            <hr />
           </React.Fragment>
         )}
         {this.state.showPage && (
