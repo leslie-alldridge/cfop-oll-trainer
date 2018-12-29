@@ -59,6 +59,133 @@ class App extends Component {
         />
       );
     };
+    const MyNoEdgeOLL = props => {
+      return (
+        <NoEdgeOLL
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyCShapes = props => {
+      return (
+        <CShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+
+    const MyIShapes = props => {
+      return (
+        <IShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyLShapes = props => {
+      return (
+        <LShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyPShapes = props => {
+      return (
+        <PShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyTShapes = props => {
+      return (
+        <TShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyWShapes = props => {
+      return (
+        <WShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyAwkward = props => {
+      return (
+        <Awkward
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyFishShapes = props => {
+      return (
+        <FishShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyKnightShapes = props => {
+      return (
+        <KnightShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyBigBolts = props => {
+      return (
+        <BigBolts
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MySmallBolts = props => {
+      return (
+        <SmallBolts
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MySquareShapes = props => {
+      return (
+        <SquareShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
+    const MyArrowHShapes = props => {
+      return (
+        <ArrowHShapes
+          goBack={this.goBack}
+          handlePageChange={this.handlePageChange}
+          {...props}
+        />
+      );
+    };
     return (
       <Router>
         <div className="App">
@@ -73,88 +200,32 @@ class App extends Component {
           <div id="bodyContent">
             {this.state.OLL && <Route exact path="/" render={MyOLL} />}
             {this.state.NoEdgeOLL && (
-              <NoEdgeOLL
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
+              <Route exact path="/" render={MyNoEdgeOLL} />
             )}
-            {this.state.CShapes && (
-              <CShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
-            )}
-            {this.state.IShapes && (
-              <IShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
-            )}
-            {this.state.LShapes && (
-              <LShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
-            )}
-            {this.state.PShapes && (
-              <PShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
-            )}
-            {this.state.TShapes && (
-              <TShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
-            )}
-            {this.state.WShapes && (
-              <WShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
-            )}
-            {this.state.Awkward && (
-              <Awkward
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
-            )}
+            {this.state.CShapes && <Route exact path="/" render={MyCShapes} />}
+            {this.state.IShapes && <Route exact path="/" render={MyIShapes} />}
+            {this.state.LShapes && <Route exact path="/" render={MyLShapes} />}
+            {this.state.PShapes && <Route exact path="/" render={MyPShapes} />}
+            {this.state.TShapes && <Route exact path="/" render={MyTShapes} />}
+            {this.state.WShapes && <Route exact path="/" render={MyWShapes} />}
+            {this.state.Awkward && <Route exact path="/" render={MyAwkward} />}
             {this.state.FishShapes && (
-              <FishShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
+              <Route exact path="/" render={MyFishShapes} />
             )}
             {this.state.KnightShapes && (
-              <KnightShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
+              <Route exact path="/" render={MyKnightShapes} />
             )}
             {this.state.BigBolts && (
-              <BigBolts
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
+              <Route exact path="/" render={MyBigBolts} />
             )}
             {this.state.SmallBolts && (
-              <SmallBolts
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
+              <Route exact path="/" render={MySmallBolts} />
             )}
             {this.state.SquareShapes && (
-              <SquareShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
+              <Route exact path="/" render={MySquareShapes} />
             )}
             {this.state.ArrowHShapes && (
-              <ArrowHShapes
-                goBack={this.goBack}
-                handlePageChange={this.handlePageChange}
-              />
+              <Route exact path="/" render={MyArrowHShapes} />
             )}
           </div>
           <Route path="/drills" component={Drills} />

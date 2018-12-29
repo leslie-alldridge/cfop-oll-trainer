@@ -42,6 +42,8 @@ class CShapes extends React.Component {
       <div className="container">
         {this.state.mainPage && (
           <React.Fragment>
+            <hr />
+
             <p className="title is-3">C Shapes</p>
             <div className="columns is-mobile algContainer">
               <div className="column ">
