@@ -28,17 +28,26 @@ class Algorithm extends Component {
   };
 
   handleChange = item => {
-    console.log(item.target.innerText);
     this.setState({
       selected: true,
       alg: item.target.innerText
     });
   };
 
+  goBack = () => {
+    this.setState({
+      drills: false,
+      timer: false,
+      alg: "",
+      selected: false,
+      hide: false
+    });
+  };
+
   render() {
     return (
       <div>
-        {this.state.hide === false && (
+        {this.state.hide === false ? (
           <React.Fragment>
             <h3 className="title is-3">
               Currently Viewing: {this.props.image}
@@ -96,6 +105,11 @@ class Algorithm extends Component {
             >
               Back
             </button>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            {this.state.drills && <Drills goBack={this.goBack} />}
+            {this.state.timer && <Timer />}
           </React.Fragment>
         )}
       </div>

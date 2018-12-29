@@ -26,7 +26,6 @@ class Drills extends Component {
         quantity: this.state.quantity - 1
       });
     }
-    console.log(this.state);
   };
 
   render() {
@@ -47,6 +46,7 @@ class Drills extends Component {
             <Stopwatch handleRound={this.handleRound} />
           </div>
         )}
+        <button onClick={this.props.goBack}>Back</button>
       </div>
     );
   }
