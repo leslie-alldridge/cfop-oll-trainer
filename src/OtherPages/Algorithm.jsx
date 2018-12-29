@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import Timer from "./Timer";
 import Drills from "./Drills";
 
 class Algorithm extends Component {
   state = {
-    drills: false,
     timer: false,
     alg: "",
     selected: false,
@@ -14,7 +15,6 @@ class Algorithm extends Component {
   handleDrills = () => {
     this.setState({
       timer: false,
-      drills: true,
       hide: true
     });
   };
@@ -22,7 +22,6 @@ class Algorithm extends Component {
   handleTimer = () => {
     this.setState({
       timer: true,
-      drills: false,
       hide: true
     });
   };
@@ -36,7 +35,6 @@ class Algorithm extends Component {
 
   goBack = () => {
     this.setState({
-      drills: false,
       timer: false,
       alg: "",
       selected: false,
@@ -76,16 +74,16 @@ class Algorithm extends Component {
                 );
               })}
             </ul>
-            <p>Session Type</p>
-
+            {this.state.selected !== false && <p>Session Type</p>}
             {this.state.selected !== false && (
-              <button
+              <Link
                 id="buttonSession"
                 className={"button is-link"}
                 onClick={this.handleDrills}
+                to="/drills"
               >
                 Drills
-              </button>
+              </Link>
             )}
             {this.state.selected !== false && (
               <button

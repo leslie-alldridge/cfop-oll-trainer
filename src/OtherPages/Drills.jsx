@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import Stopwatch from "./Stopwatch";
 
 class Drills extends Component {
@@ -46,7 +48,9 @@ class Drills extends Component {
             <Stopwatch handleRound={this.handleRound} />
           </div>
         )}
-        <button onClick={this.props.goBack}>Back</button>
+        <Link onClick={this.goBack} to="/">
+          Back to OLLs
+        </Link>
       </div>
     );
   }
